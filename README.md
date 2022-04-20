@@ -1,29 +1,14 @@
 # Docker image for computer-union.jp
 
-- Apache2
-- MySQL
-- PHP
-- WordPress
-
-イメージのビルドと DockerHub への登録
+## Local development
 
 ```
-$ docker build -t michinobumaeda/computer-union-wp .
-$ docker login
-$ docker push michinobumaeda/computer-union-wp
-````
-
-コンテナを開始
-
-```
+$ git clone git@github.com:MichinobuMaeda/docker-computer-union-wp.git
+$ cd docker-computer-union-wp
 $ docker-compose up
 ```
 
-別のターミナルからコンテナを終了
-
-```
-$ docker-compose down
-```
+## Applying production contents
 
 https://computer-union.jp/wp-admin/
 
