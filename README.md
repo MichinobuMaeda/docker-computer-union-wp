@@ -1,14 +1,40 @@
-# Docker image for computer-union.jp
+# Docker image for https://computer-union.jp
 
-## Local development
+## Prerequisites
+
+- docker-compose ( included in　[Docker Desktop](https://www.docker.com/products/docker-desktop/) )
+- git ( or download zip from https://github.com/MichinobuMaeda/docker-computer-union-wp )
+
+## Usage
 
 ```
 $ git clone git@github.com:MichinobuMaeda/docker-computer-union-wp.git
 $ cd docker-computer-union-wp
-$ docker-compose up
+$ docker-compose -f docker-compose-local.yml up
+
+^C
+
+$ docker-compose start
+$ docker-compose stop
+$ docker-compose down
+```
+
+## Directories and files
+
+```
++--- volumes            # created automatically
+    +--- db             # --> db:/var/lib/mysql
+    +--- wordpress      # --> wordpress:/var/www/html
++--- wordpress          # customised image
+        Dockerfile
+        php-custom.ini
+    docker-compose.yml
+    README.md
 ```
 
 ## Applying production contents
+
+Download ``WordPress.YYYY-MM-DD.xml``.
 
 https://computer-union.jp/wp-admin/
 
@@ -17,7 +43,7 @@ https://computer-union.jp/wp-admin/
         - エクスポート
             - すべてのコンテンツ
 
-ダウンロードしたファイル WordPress.YYYY-MM-DD.xml を後の手順で使う。
+Brefore uploading ``WordPress.YYYY-MM-DD.xml``.
 
 http://localhost:8080/
 
@@ -47,14 +73,26 @@ http://localhost:8080/
         - 一般
             - キャッチフレーズ: 電算労コンピュータ関連労働組合
             - 週の始まり: 日曜日
+
+Upload ``WordPress.YYYY-MM-DD.xml``.
+
+http://localhost:8080/
+
+- 管理画面
     - ツール
         - インポート
             - WordPress
                 - 今すぐインストール
                 - インポーターの実行
-                    - ファイルを選択: WordPress.YYYY-MM-DD.xml
+                    - ファイルを選択: ``WordPress.YYYY-MM-DD.xml``
                         - 投稿者の割り当て: それぞれ元と同じログイン名を追加する。
                         - 添付ファイルのインポート: [v] 添付ファイルをダウンロードしてインポートする
+
+After uploading ``WordPress.YYYY-MM-DD.xml``.
+
+http://localhost:8080/
+
+- 管理画面
     - 外観
         - カスタマイズ
             - ホームページ設定
@@ -72,4 +110,3 @@ http://localhost:8080/
                     - [v] Primary Menu
         - ウィジット
             - Right Sidebar の既定の内容を削除して本番サイトからコピーする
-
