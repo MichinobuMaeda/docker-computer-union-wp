@@ -10,7 +10,7 @@
 ```
 $ git clone git@github.com:MichinobuMaeda/docker-computer-union-wp.git
 $ cd docker-computer-union-wp
-$ docker-compose -f docker-compose-local.yml up
+$ docker-compose up
 
 ^C
 
