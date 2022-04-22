@@ -10,7 +10,7 @@
 ```
 $ git clone git@github.com:MichinobuMaeda/docker-computer-union-wp.git
 $ cd docker-computer-union-wp
-$ docker-compose -f docker-compose-local.yml up
+$ docker-compose up
 
 ^C
 
@@ -69,10 +69,6 @@ http://localhost:8080/
             - Redirection
             - Yoast Duplicate Post
         - 追加したプラグインをすべて有効化する。
-    - 設定
-        - 一般
-            - キャッチフレーズ: 電算労コンピュータ関連労働組合
-            - 週の始まり: 日曜日
 
 Upload ``WordPress.YYYY-MM-DD.xml``.
 
@@ -93,6 +89,10 @@ After uploading ``WordPress.YYYY-MM-DD.xml``.
 http://localhost:8080/
 
 - 管理画面
+    - 設定
+        - 一般
+            - キャッチフレーズ: 電算労コンピュータ関連労働組合
+            - 週の始まり: 日曜日
     - 外観
         - カスタマイズ
             - ホームページ設定
@@ -104,9 +104,11 @@ http://localhost:8080/
                 - Blog Settings
                     - Full Content
                     - [v] Disable Share Buttons
-                - 色: #3f9b98
+            - 色: #3f9b98
             - メニュー
                 - topmenu
-                    - [v] Primary Menu
-        - ウィジット
+                    - メニューの位置
+                        - [v] Primary Menu
+            - ウィジェット ★ここではなく上のレベルの「ウィジェット」を編集する。
+        - ウィジェット
             - Right Sidebar の既定の内容を削除して本番サイトからコピーする
