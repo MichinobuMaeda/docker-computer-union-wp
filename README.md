@@ -84,6 +84,8 @@ http://localhost:8080/
                         - 投稿者の割り当て: それぞれ元と同じログイン名を追加する。
                         - 添付ファイルのインポート: [v] 添付ファイルをダウンロードしてインポートする
 
+★インポートの実行ボタンを2回押さないように注意すること!!
+
 After uploading ``WordPress.YYYY-MM-DD.xml``.
 
 http://localhost:8080/
