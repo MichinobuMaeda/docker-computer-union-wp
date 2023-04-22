@@ -65,8 +65,6 @@ Brefore uploading ``WordPress.YYYY-MM-DD.xml``.
     - プラグイン
         - 新規追加:
             - Contact Form 7
-            - Export All URLs
-            - Redirection
             - Yoast Duplicate Post
         - 追加したプラグインをすべて有効化する。
 
