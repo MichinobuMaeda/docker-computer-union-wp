@@ -1,13 +1,13 @@
-# Docker image for https://computer-union.jp
+# Docker image for <https://computer-union.jp>
 
 ## Prerequisites
 
 - docker-compose ( included in　[Docker Desktop](https://www.docker.com/products/docker-desktop/) )
-- git ( or download zip from https://github.com/MichinobuMaeda/docker-computer-union-wp )
+- git ( or download zip from <https://github.com/MichinobuMaeda/docker-computer-union-wp> )
 
 ## Usage
 
-```
+```bash
 $ git clone git@github.com:MichinobuMaeda/docker-computer-union-wp.git
 $ cd docker-computer-union-wp
 $ docker-compose up
@@ -21,7 +21,7 @@ $ docker-compose down
 
 ## Directories and files
 
-```
+```text
 +--- volumes            # created automatically
     +--- db             # --> db:/var/lib/mysql
     +--- wordpress      # --> wordpress:/var/www/html
@@ -36,7 +36,7 @@ $ docker-compose down
 
 Download ``WordPress.YYYY-MM-DD.xml``.
 
-https://computer-union.jp/wp-admin/
+<https://computer-union.jp/wp-admin/>
 
 - 管理画面
     - ツール
@@ -45,7 +45,7 @@ https://computer-union.jp/wp-admin/
 
 Brefore uploading ``WordPress.YYYY-MM-DD.xml``.
 
-http://localhost:8080/
+<http://localhost:8080/>
 
 - インストール
     - 言語: 日本語
@@ -72,7 +72,7 @@ http://localhost:8080/
 
 Upload ``WordPress.YYYY-MM-DD.xml``.
 
-http://localhost:8080/
+<http://localhost:8080/>
 
 - 管理画面
     - ツール
@@ -88,7 +88,7 @@ http://localhost:8080/
 
 After uploading ``WordPress.YYYY-MM-DD.xml``.
 
-http://localhost:8080/
+<http://localhost:8080/>
 
 - 管理画面
     - 設定
