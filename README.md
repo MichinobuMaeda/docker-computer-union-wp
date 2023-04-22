@@ -58,7 +58,7 @@ Brefore uploading ``WordPress.YYYY-MM-DD.xml``.
 - 管理画面
     - 投稿
         - 一覧
-            - Hello world! をゴミ箱に移動
+            - Hello world! をゴミ箱に移動し、ゴミ箱を空にする。
     - 外観
         - 新規追加: Square
         - 追加したテーマを有効化する。
@@ -86,6 +86,12 @@ Upload ``WordPress.YYYY-MM-DD.xml``.
 
 After uploading ``WordPress.YYYY-MM-DD.xml``.
 
+子テーマをコピーする。
+
+```bash
+scp -r cu:/home/ccu/computer-union.jp/public_html/wp-content/themes/square-child volumes/wordpress/wp-content/themes/
+```
+
 <http://localhost:8080/>
 
 - 管理画面
@@ -94,10 +100,15 @@ After uploading ``WordPress.YYYY-MM-DD.xml``.
             - キャッチフレーズ: 電算労コンピュータ関連労働組合
             - 週の始まり: 日曜日
     - 外観
+        - テーマ
+            - "Square Child" を有効にする
         - カスタマイズ
             - ホームページ設定
                 - 固定ページ: コンピュータ・ユニオンについて
             - General Settings
+                - Site Logo, Title & Tagline
+                    - サイトアイコン
+                        - cropped-cu_logo_512.png
                 - Header Settings
                     - 画像を変更:
                         - メディアライブラリ: ENIACtrim3.jpg
