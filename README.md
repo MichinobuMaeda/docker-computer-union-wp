@@ -25,7 +25,7 @@ $ docker-compose down
 +--- volumes            # created automatically
     +--- db             # --> db:/var/lib/mysql
     +--- wordpress      # --> wordpress:/var/www/html
-+--- wordpress          # customised image
++--- src                # customised image
         Dockerfile
         php-custom.ini
     docker-compose.yml
