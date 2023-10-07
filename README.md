@@ -42,7 +42,7 @@ $ docker-compose down
             - エクスポートする内容を選択: すべてのコンテンツ
 
 本番環境の `wp-content/themes/twentytwentythree/functions.php` を
-`volumes/wordpress/` の下にコピーする。
+`volumes/wordpress/wp-content/themes/twentytwentythree` の下にコピーする。
 
 <http://localhost:8080/>
 
